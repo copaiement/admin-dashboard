@@ -1,2 +1,169 @@
 /* stylesheet for Admin Dashboard */
 
+/* import fonts */
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&display=swap');
+
+:root {
+    font-size: 24px;
+    --font-family: 'Quicksand', sans-serif;
+    --font-bold: 700;
+    --font-reg: 400;
+
+
+    /* default color vars (light) */
+    --bg-color: #d1d5db;
+    --comp-color: #f9fafb;
+    --contrast-color: #f59e0b;
+    --button-hover: #b4760c;
+    --text-color: #374151;
+    --subtext-color: #6b7280;
+    --alt-text-color: #f9fafb;
+
+}
+
+html[data-theme="dark"] {
+    --bg-color: #4b5563;
+    --comp-color: #1f2937;
+    --contrast-color: #1a1000;
+    --button-hover: #312b22;
+    --text-color: #bebebe;
+    --subtext-color: #acacac;
+    --alt-text-color: #98b5d1;
+}
+
+html[data-theme="light"] {
+    /* paste in final colors from :root */
+}
+
+* {
+    font-family: var(--font-family);
+    box-sizing: border-box;
+    margin: 0;
+}
+
+/* icon styling*/
+svg {
+    fill: var(--alt-text-color);
+}
+
+.header-icon {
+    fill: var(--text-color);
+}
+
+.container {
+    height: 100vh;
+    width: 100vw;
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    grid-template-rows: 1fr 5fr;
+
+}
+
+.sidebar {
+    /* color settings */
+    background-color: var(--contrast-color);
+    color: var(--alt-text-color);
+    font-weight: var(--font-bold);
+    /* grid placement */
+    grid-column: 1/2;
+    grid-row: 1/3;
+    /* internals */
+    display: grid;
+    grid-template-rows: auto auto 1fr;
+    gap: 5%;
+    padding: 32px;
+
+}
+
+.menu,
+.settings {
+    display: grid;
+    grid-template-columns: 36px 3fr;
+    grid-auto-rows: 36px;
+    align-items: center;
+    gap: 16px;
+
+}
+
+#theme-slider {
+    font-size: .75rem;
+}
+
+.header-container {
+    /* color settings */
+    background-color: var(--comp-color);
+    font-weight: var(--font-bold);
+    /* internals */
+    padding: 16px 32px;
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+
+}
+
+.notifications-bar {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    align-items: center;
+    gap: 32px;
+}
+
+.notifications-left {
+    display: grid;
+    grid-template-columns: 36px auto;
+    gap: 32px;
+}
+
+input {
+    background-color: var(--bg-color);
+    border: none;
+    border-radius: 8px;
+}
+
+.notifications-right {
+    justify-self: right;
+    align-items: center;
+    display: grid;
+    grid-template-columns: 36px 1fr 1fr;
+    gap: 16px;
+
+}
+
+.toolbar {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 32px;
+}
+
+.toolbar-left {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+}
+
+.toolbar-right {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 32px;
+}
+
+button {
+    font-family: var(--font-family);
+    font-size: .75rem;
+    font-weight: var(--font-bold);
+    background-color: var(--contrast-color);
+    color: var(--alt-text-color);
+    padding: 8px 16px;
+    border: none;
+    border-radius: 8px;
+}
+
+button:hover {
+    background-color: var(--button-hover);
+}
+
+.body-container {
+    /* color settings */
+    background-color: var(--bg-color);
+
+    grid-column: 2/3;
+}
