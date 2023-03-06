@@ -14,6 +14,7 @@
     --bg-color: #d1d5db;
     --comp-color: #f9fafb;
     --contrast-color: #f59e0b;
+    --alt-contrast-color: rgb(36, 117, 117);
     --button-hover: #b4760c;
     --text-color: #374151;
     --subtext-color: #6b7280;
@@ -46,7 +47,8 @@ svg {
     fill: var(--alt-text-color);
 }
 
-.header-icon {
+.header-icon,
+.tile-icon {
     fill: var(--text-color);
 }
 
@@ -119,11 +121,17 @@ input {
     border-radius: 8px;
 }
 
+.pp-default-thumbnail {
+    width: 36px;
+    background-color: var(--contrast-color);
+    border-radius: 50%;
+}
+
 .notifications-right {
     justify-self: right;
     align-items: center;
     display: grid;
-    grid-template-columns: 36px 1fr 1fr;
+    grid-template-columns: 36px 36px 1fr;
     gap: 16px;
 
 }
@@ -137,13 +145,29 @@ input {
 
 .toolbar-left {
     display: grid;
-    grid-template-columns: 1fr 3fr;
+    grid-template-columns: 75px 3fr;
+    gap: 36px;
+    align-items: center;
 }
 
 .toolbar-right {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 32px;
+}
+
+.pp-default {
+    width: 75px;
+    background-color: var(--contrast-color);
+    border-radius: 50%;
+}
+
+.greeting {
+    font-size: .75rem;
+}
+
+.greeting #name {
+    font-size: 1rem;
 }
 
 button {
@@ -164,6 +188,70 @@ button:hover {
 .body-container {
     /* color settings */
     background-color: var(--bg-color);
-
     grid-column: 2/3;
+    padding: 32px;
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    gap: 32px;
 }
+
+.body-header {
+    font-size: 1rem;
+    font-weight: var(--font-bold);
+}
+
+.tiles {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(3,1fr);
+    gap: 32px;
+}
+
+.tile {
+    background-color: var(--comp-color);
+    border-radius: 16px;
+    border: 16px solid var(--alt-contrast-color);
+    border-style: none none none solid;
+    padding: 16px;
+    display: grid;
+    grid-template-rows: 1fr 2fr 1fr;
+}
+
+.tile-header {
+    align-self: end;
+    font-weight: var(--font-bold);
+    font-size: .8rem;
+}
+
+.tile-content {
+    font-size: .75rem;
+}
+
+.tile-icons {
+    display: grid;
+    grid-template-columns: repeat(3,32px);
+    align-items: end;
+    justify-content: right;
+    gap: 16px;
+}
+
+.site-info {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    gap: 32px;
+}
+
+.tiles-area,
+.announcements,
+.trending {
+    display: grid;
+    grid-template-rows: auto 1fr;
+    gap: 16px;
+}
+
+.tile-side {
+    background-color: var(--comp-color);
+    border-radius: 16px;
+}
+
+
