@@ -185,4 +185,16 @@
         </div>
     </div>
 </body>
+
+<script>
+    const darkModeSlider = document.getElementById("dark-mode");
+    darkModeSlider.addEventListener('change', () => {
+        if (darkModeSlider.checked) {
+            document.documentElement.setAttribute('data-theme', "dark");
+        } else {
+            document.documentElement.setAttribute('data-theme', "light");
+        }
+    });
+</script>
+
 </html>

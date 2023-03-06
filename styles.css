@@ -16,9 +16,11 @@
     --contrast-color: #f59e0b;
     --alt-contrast-color: rgb(36, 117, 117);
     --button-hover: #b4760c;
-    --text-color: #374151;
+    --text-color: #000000;
     --subtext-color: #6b7280;
     --alt-text-color: #f9fafb;
+    --fake-profile: rgb(247, 206, 173);
+    color: var(--text-color);
 
 }
 
@@ -26,14 +28,27 @@ html[data-theme="dark"] {
     --bg-color: #4b5563;
     --comp-color: #1f2937;
     --contrast-color: #1a1000;
+    --alt-contrast-color: rgb(36, 117, 117);
     --button-hover: #312b22;
     --text-color: #bebebe;
     --subtext-color: #acacac;
     --alt-text-color: #98b5d1;
+    --fake-profile: rgb(140, 141, 150);
+    color: var(--text-color);
 }
 
 html[data-theme="light"] {
     /* paste in final colors from :root */
+    --bg-color: #d1d5db;
+    --comp-color: #f9fafb;
+    --contrast-color: #f59e0b;
+    --alt-contrast-color: rgb(36, 117, 117);
+    --button-hover: #b4760c;
+    --text-color: #374151;
+    --subtext-color: #6b7280;
+    --alt-text-color: #f9fafb;
+    --fake-profile: rgb(247, 206, 173);
+    color: var(--text-color);
 }
 
 * {
@@ -50,6 +65,13 @@ svg {
 .header-icon,
 .tile-icon {
     fill: var(--text-color);
+}
+
+.pp-default,
+.pp-default-thumbnail,
+.fake-profile-pic {
+    background-color: var(--fake-profile);
+    border-radius: 50%;
 }
 
 .container {
@@ -123,8 +145,6 @@ input {
 
 .pp-default-thumbnail {
     width: 36px;
-    background-color: var(--contrast-color);
-    border-radius: 50%;
 }
 
 .notifications-right {
@@ -158,8 +178,6 @@ input {
 
 .pp-default {
     width: 75px;
-    background-color: var(--contrast-color);
-    border-radius: 50%;
 }
 
 .greeting {
